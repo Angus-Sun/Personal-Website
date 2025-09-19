@@ -15,7 +15,7 @@ export const AboutSection = () => {
   }, []);
 
   const BoldUnderline = ({ children }) => (
-    <span className="font-bold relative bold-underline text-foreground">
+    <span className="font-bold relative bold-underline text-foreground group-hover:text-hover-accent transition-colors duration-300">
       <span className="relative z-10">{children}</span>
       <span
         className="
@@ -31,20 +31,43 @@ export const AboutSection = () => {
 
   const aboutPoints = [
     <>
-      Software Engineering @ <BoldUnderline>University of Waterloo</BoldUnderline>
+      Software Engineering{" "}
+      <img 
+        src="/assets/images/UWaterloo.png" 
+        alt="University of Waterloo"
+        className="inline w-6 h-6 xl:w-8 xl:h-8 2xl:w-10 2xl:h-10 mx-2 rounded-sm"
+      />{" "}
+      <BoldUnderline>University of Waterloo</BoldUnderline>
     </>,
     <>
       Interested in <BoldUnderline>web development &amp; AI/ML</BoldUnderline> and building scalable, innovative applications
     </>,
-    "1st year from Vancouver passionate about music, photography, and building apps"
+    <>
+    1st year from {" "}
+      <img 
+        src="/assets/images/canucks.png" 
+        alt="Vancouver"
+        className="inline w-6 h-6 xl:w-8 xl:h-8 2xl:w-10 2xl:h-10 mx-2 rounded-sm"
+      />{" "}Vancouver passionate about <BoldUnderline>music, photography, and building apps</BoldUnderline>
+    </>
   ];
 
   const previousExperience = [
     <>
-      Built <BoldUnderline>Squat Showdown</BoldUnderline>, a web app which leverages AI to detect human poses
+      Built{" "}
+      <img 
+        src="/assets/images/squat.png" 
+        alt="Squat Showdown"
+        className="inline w-6 h-6 xl:w-8 xl:h-8 2xl:w-10 2xl:h-10 mx-2 rounded-sm"
+      />{" "} <BoldUnderline>Squat Showdown</BoldUnderline>, a web app which leverages AI to detect human poses
     </>,
     <>
-      Interned <BoldUnderline> @ Falcon Technologies</BoldUnderline>, developing secure APIs & scalable systems
+      Interned{" "}
+      <img 
+        src="/assets/images/falcon_technologies.jpeg" 
+        alt="University of Waterloo"
+        className="inline w-6 h-6 xl:w-8 xl:h-8 2xl:w-10 2xl:h-10 mx-2 rounded-sm"
+      />{" "} <BoldUnderline> Falcon Technologies</BoldUnderline>, developing secure APIs & scalable systems
     </>,
   ];
 
@@ -91,16 +114,16 @@ export const AboutSection = () => {
           <div className="space-y-5 xl:space-y-8 2xl:space-y-12">
             <div>
               <h3 className="text-2xl xl:text-3xl 2xl:text-6xl font-semibold mb-4 xl:mb-6 2xl:mb-10 text-foreground group cursor-pointer animate-slide-in">
-                <span className="relative
+                <span className="relative transition-colors duration-300 group-hover:text-hover-accent
                   before:absolute before:left-0 before:-bottom-1 before:h-0.5 before:bg-primary before:w-0 before:transition-all before:duration-300 group-hover:before:w-full">
                   About me:
                 </span>
               </h3>
-              <ul className="list-disc md:list-none space-y-2 xl:space-y-4 2xl:space-y-6 pl-0 text-center">
+              <ul className="list-none space-y-2 xl:space-y-4 2xl:space-y-6 pl-0 text-center">
                 {aboutPoints.map((point, index) => (
                   <li
                      key={index}
-                     className="group text-muted-foreground cursor-pointer animate-slide-in ml-4 md:ml-0"
+                     className="group text-muted-foreground cursor-pointer animate-slide-in md:ml-0"
                      style={{ animationDelay: `${index * 0.1}s` }}
                    >
                      <span className="block text-base xl:text-lg 2xl:text-2xl transition-colors transition-transform duration-200 group-hover:text-foreground group-hover:translate-x-1">
@@ -113,16 +136,16 @@ export const AboutSection = () => {
 
             <div>
               <h3 className="text-2xl xl:text-3xl 2xl:text-6xl font-semibold mb-4 xl:mb-6 2xl:mb-10 text-foreground group cursor-pointer animate-slide-in">
-                <span className="relative
+                <span className="relative transition-colors duration-300 group-hover:text-hover-accent
                   before:absolute before:left-0 before:-bottom-1 before:h-0.5 before:bg-primary before:w-0 before:transition-all before:duration-300 group-hover:before:w-full">
                   Previously I've:
                 </span>
               </h3>
-              <ul className="list-disc md:list-none space-y-2 xl:space-y-4 2xl:space-y-6 pl-0 text-center">
+              <ul className="list-none space-y-2 xl:space-y-4 2xl:space-y-6 pl-0 text-center">
                 {previousExperience.map((experience, index) => (
                   <li 
                     key={index} 
-                    className="group text-muted-foreground cursor-pointer animate-slide-in ml-4 md:ml-0"
+                    className="group text-muted-foreground cursor-pointer animate-slide-in md:ml-0"
                     style={{ animationDelay: `${(index + 3) * 0.1}s` }}
                   >
                     <span className="block text-base xl:text-lg 2xl:text-2xl transition-colors transition-transform duration-200 group-hover:text-foreground group-hover:translate-x-1">
@@ -136,7 +159,7 @@ export const AboutSection = () => {
         </div>
       </section>
       
-      <section className="max-w-4xl xl:max-w-6xl mx-auto py-8 md:py-12 lg:py-8">
+      <section className="max-w-4xl xl:max-w-6xl mx-auto py-8 md:py-12 lg:py-3">
         <div className="flex w-full justify-center">
           <button
             onClick={() => navigate("/projects")}
