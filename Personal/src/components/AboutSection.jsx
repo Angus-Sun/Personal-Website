@@ -56,10 +56,10 @@ export const AboutSection = () => {
   ];
 
   return (
-    <div className="px-4 sm:px-6 xl:px-12">
-      <section className="max-w-4xl xl:max-w-6xl mx-auto pt-20 md:pt-32 lg:pt-20 pb-4 md:pb-14 lg:pb-4 md:min-h-[60vh] lg:min-h-0">
-        <div className="mb-10 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold">
+    <div className="px-4 sm:px-6 xl:px-12 " style={{ transform: 'scale(0.95)' }}>
+      <section className="max-w-4xl xl:max-w-6xl mx-auto pt-20 md:pt-32 lg:pt-13 pb-4 md:pb-14 lg:pb-4 md:min-h-[60vh] lg:min-h-0">
+        <div className="mb-6 lg:mb-6 2xl:mb-16 text-center">
+          <h1 className="text-4xl md:text-5xl 2xl:text-7xl font-bold">
             <TextType
               as="span"
               text="Hi there! I'm "
@@ -87,23 +87,23 @@ export const AboutSection = () => {
           </h1>
         </div>
 
-        <div className="max-w-3xl mx-auto w-full text-center ">
-          <div className="space-y-5">
+        <div className="max-w-3xl xl:max-w-5xl 2xl:max-w-6xl mx-auto w-full text-center">
+          <div className="space-y-5 xl:space-y-8 2xl:space-y-12">
             <div>
-              <h3 className="text-2xl font-semibold mb-4 text-foreground group cursor-pointer">
+              <h3 className="text-2xl xl:text-3xl 2xl:text-6xl font-semibold mb-4 xl:mb-6 2xl:mb-10 text-foreground group cursor-pointer">
                 <span className="relative
                   before:absolute before:left-0 before:-bottom-1 before:h-0.5 before:bg-primary before:w-0 before:transition-all before:duration-300 group-hover:before:w-full">
                   About me:
                 </span>
               </h3>
-              <ul className="list-disc pl-5 sm:pl-12 md:pl-16 lg:pl-12 space-y-2">
+              <ul className="list-disc md:list-none space-y-2 xl:space-y-4 2xl:space-y-6 pl-4 md:pl-0 text-center">
                 {aboutPoints.map((point, index) => (
                   <li
                      key={index}
                      className="group text-muted-foreground cursor-pointer animate-slide-in"
                      style={{ animationDelay: `${index * 0.1}s` }}
                    >
-                     <span className="block transition-colors transition-transform duration-200 group-hover:text-foreground group-hover:translate-x-1">
+                     <span className="block text-base xl:text-lg 2xl:text-2xl transition-colors transition-transform duration-200 group-hover:text-foreground group-hover:translate-x-1">
                        {point}
                      </span>
                    </li>
@@ -112,20 +112,20 @@ export const AboutSection = () => {
             </div>
 
             <div>
-              <h3 className="text-2xl font-semibold mb-4 text-foreground group cursor-pointer">
+              <h3 className="text-2xl xl:text-3xl 2xl:text-6xl font-semibold mb-4 xl:mb-6 2xl:mb-10 text-foreground group cursor-pointer">
                 <span className="relative
                   before:absolute before:left-0 before:-bottom-1 before:h-0.5 before:bg-primary before:w-0 before:transition-all before:duration-300 group-hover:before:w-full">
                   Previously I've:
                 </span>
               </h3>
-              <ul className="list-disc pl-5 sm:pl-12 md:pl-16 lg:pl-12 space-y-2">
+              <ul className="list-disc md:list-none space-y-2 xl:space-y-4 2xl:space-y-6 pl-4 md:pl-0 text-center">
                 {previousExperience.map((experience, index) => (
                   <li 
                     key={index} 
                     className="group text-muted-foreground cursor-pointer animate-slide-in"
                     style={{ animationDelay: `${(index + 3) * 0.1}s` }}
                   >
-                    <span className="block transition-colors transition-transform duration-200 group-hover:text-foreground group-hover:translate-x-1">
+                    <span className="block text-base xl:text-lg 2xl:text-2xl transition-colors transition-transform duration-200 group-hover:text-foreground group-hover:translate-x-1">
                       {experience}
                     </span>
                   </li>
