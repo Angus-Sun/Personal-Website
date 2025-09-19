@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import TextType from "./TextType";
 import { Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 export const AboutSection = () => {
   const [showSecondText, setShowSecondText] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -137,7 +139,7 @@ export const AboutSection = () => {
       <section className="max-w-4xl mx-auto py-8 md:py-12 lg:py-8">
         <div className="flex w-full justify-center">
           <button
-            onClick={() => (window.location.href = '/projects')}
+            onClick={() => navigate("/projects")}
             className="fancy-btn group relative inline-flex items-center gap-2 px-12 py-5 rounded-xl font-semibold text-lg
                        text-foreground bg-muted/70 backdrop-blur border border-primary/30
                        transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-0.5"
