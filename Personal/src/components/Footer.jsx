@@ -11,7 +11,7 @@ const socialLinks = [
     name: "LinkedIn",
     icon: Linkedin,
     href: "https://www.linkedin.com/in/angussun/",
-    colorClass: "hover:text-primary",
+    colorClass: "hover:text-primary-foreground",
   },
   {
     name: "Email",
@@ -23,8 +23,14 @@ const socialLinks = [
     name: "Resume",
     icon: Newspaper,
     href: "/Angus_Sun_Resume.pdf",
-    colorClass: "hover:text-sky-400",
+    colorClass: "hover:text-primary-foreground",
   },
+  {
+    name: "Twitter",
+    icon: Twitter,
+    href: "https://www.twitter.com/_angussun_",
+    colorClass: "hover:text-primary-foreground"
+  }
 ];
 
 export const Footer = () => {
