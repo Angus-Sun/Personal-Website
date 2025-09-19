@@ -72,7 +72,7 @@
 
     --primary: 219 75% 45%; 
     --primary-foreground: 0 0% 100%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary-foreground: 0 0% 85%;
     --border: 200 20% 88%;
     --hover-accent: 219 75% 35%; 
   }
