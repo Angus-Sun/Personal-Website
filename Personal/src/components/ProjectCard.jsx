@@ -96,7 +96,7 @@ export const ProjectCard = ({ project }) => {
               href={github}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 px-3 py-1.5 bg-muted hover:bg-muted/80 rounded-lg text-foreground transition-colors duration-200 text-sm" 
+              className="flex items-center gap-1.5 px-3 py-1.5 bg-secondary-foreground hover:bg-secondary-foreground/70 rounded-lg text-foreground transition-colors duration-200 text-sm" 
             >
               <Github size={14} /> 
               Code
@@ -107,7 +107,7 @@ export const ProjectCard = ({ project }) => {
               href={demo || href}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 px-3 py-1.5 bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg transition-colors duration-200 text-sm" 
+              className="flex items-center gap-1.5 px-3 py-1.5 bg-primary hover:bg-primary/80 text-primary-foreground rounded-lg transition-colors duration-200 text-sm" 
             >
               <ExternalLink size={14} /> 
               Live Demo

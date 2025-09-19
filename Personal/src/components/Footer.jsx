@@ -22,7 +22,7 @@ const socialLinks = [
   {
     name: "Resume",
     icon: Newspaper,
-    href: "https://x.com/",
+    href: "/Angus_Sun_Resume.pdf",
     colorClass: "hover:text-sky-400",
   },
 ];

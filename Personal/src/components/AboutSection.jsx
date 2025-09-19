@@ -36,7 +36,7 @@ export const AboutSection = () => {
     <>
       Interested in <BoldUnderline>web development &amp; AI/ML</BoldUnderline> and building scalable, innovative applications
     </>,
-    "1st year from Vancouver passionate about building apps, music, and photography"
+    "1st year from Vancouver passionate about music, photography, and building apps"
   ];
 
   const previousExperience = [

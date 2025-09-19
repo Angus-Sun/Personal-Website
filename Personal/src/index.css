@@ -7,6 +7,7 @@
 
   --color-primary: hsl(var(--primary));
   --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
 
   --color-card: hsl(var(--card));
 
@@ -71,7 +72,7 @@
 
     --primary: 219 75% 45%; 
     --primary-foreground: 0 0% 100%;
-
+    --secondary-foreground: 0 0% 100%;
     --border: 200 20% 88%;
   }
 
@@ -83,7 +84,8 @@
 
     --primary: 200 75% 65%; 
     --primary-foreground: 200 50% 3%;
-
+    --secondary-foreground: 200 20% 13%;
+    
     --border: 200 30% 15%;
   }
   * {

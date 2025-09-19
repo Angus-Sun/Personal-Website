@@ -107,7 +107,7 @@ export const Projects = () => {
       title: "Echoblock",
       href: "https://www.youtube.com/watch?v=ISp11LBiZbk&feature=youtu.be",
       description:
-        "Raspberry Pi–powered musical memory game. Real-time audio processing with LEDs. Features pitch detection, tuning feedback, and progressive difficulty.",
+        "Raspberry Pi–powered musical memory game. Real-time audio processing with LEDs. Features pitch detection using FFTS, tuning feedback, and progressive difficulty.",
       image: "/assets/projects/Echoblock Demo.png",
       imageAlt: "Echoblock",
       technologies: [
