@@ -112,6 +112,10 @@ export const Projects = () => {
       imageAlt: "Echoblock",
       technologies: [
         "Python",
+        "SciPy",
+        "Pygame",
+        "Pyaudio",
+        "Numpy"
       ],
       github: "https://github.com/Angus-Sun/EchoBlock",
       demo: "https://www.youtube.com/watch?v=ISp11LBiZbk&feature=youtu.be",
