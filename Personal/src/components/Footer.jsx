@@ -46,10 +46,10 @@ export const Footer = () => {
                   aria-label={s.name}
                   target="_blank"
                   rel="noreferrer"
-                  className={`p-3 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110
+                  className={`p-3 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 hover:bg-primary hover:text-white
                     bg-card/60 border border-border ${s.colorClass}`}
                 >
-                  <Icon className="w-6 h-6 text-foreground dark:text-primary" />
+                  <Icon className="w-6 h-6 text-foreground dark:text-primary transition-colors duration-300 hover:text-white" />
                 </a>
               );
             })}

@@ -56,8 +56,8 @@ export const AboutSection = () => {
   ];
 
   return (
-    <div className="px-4 sm:px-6">
-      <section className="max-w-4xl mx-auto pt-20 md:pt-32 lg:pt-20 pb-4 md:pb-14 lg:pb-4 md:min-h-[60vh] lg:min-h-0">
+    <div className="px-4 sm:px-6 xl:px-12">
+      <section className="max-w-4xl xl:max-w-6xl mx-auto pt-20 md:pt-32 lg:pt-20 pb-4 md:pb-14 lg:pb-4 md:min-h-[60vh] lg:min-h-0">
         <div className="mb-10 text-center">
           <h1 className="text-4xl md:text-5xl font-bold">
             <TextType
@@ -136,7 +136,7 @@ export const AboutSection = () => {
         </div>
       </section>
       
-      <section className="max-w-4xl mx-auto py-8 md:py-12 lg:py-8">
+      <section className="max-w-4xl xl:max-w-6xl mx-auto py-8 md:py-12 lg:py-8">
         <div className="flex w-full justify-center">
           <button
             onClick={() => navigate("/projects")}
