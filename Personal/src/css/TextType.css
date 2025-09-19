@@ -1,0 +1,4 @@
+.text-type { display: inline-block; }
+.text-type__content { white-space: pre; }
+.text-type__cursor { margin-left: 6px; opacity: 1; }
+.text-type__cursor--hidden { opacity: 0; }

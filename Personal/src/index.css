@@ -1,0 +1,285 @@
+@import "tailwindcss";
+
+@theme {
+  --color-border: hsl(var(--border));
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+
+  --color-card: hsl(var(--card));
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-pulse-subtle: pulse-subtle 4s ease-in-out infinite;
+  --animate-fade-in: fade-in 0.7s ease-out forwards;
+  --animate-fade-in-delay-1: fade-in 0.7s ease-out 0.2s forwards;
+  --animate-fade-in-delay-2: fade-in 0.7s ease-out 0.4s forwards;
+  --animate-fade-in-delay-3: fade-in 0.7s ease-out 0.6s forwards;
+  --animate-fade-in-delay-4: fade-in 0.7s ease-out 0.8s forwards;
+  --animate-meteor: meteor 5s linear infinite;
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  @keyframes pulse-subtle {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.8;
+    }
+  }
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes meteor {
+    0% {
+      transform: rotate(215deg) translateX(0);
+      opacity: 1;
+    }
+    70% {
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(215deg) translateX(-500px);
+      opacity: 0;
+    }
+  }
+}
+
+@layer base {
+  :root {
+    --background: 200 20% 98%;
+    --foreground: 200 50% 10%;
+
+    --card: 0 0% 100%;
+
+    --primary: 200 75% 69%; 
+    --primary-foreground: 0 0% 100%;
+
+    --border: 200 20% 88%;
+  }
+
+  .dark {
+    --background: 200 50% 3%;
+    --foreground: 200 20% 90%;
+
+    --card: 200 50% 6%;
+
+    --primary: 200 75% 65%; 
+    --primary-foreground: 200 50% 3%;
+
+    --border: 200 30% 15%;
+  }
+  * {
+    @apply border-border;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground transition-colors duration-300;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 2rem;
+
+  @media (width >= 640px) {
+    max-width: 640px;
+  }
+  @media (width >= 768px) {
+    max-width: 768px;
+  }
+  @media (width >= 1024px) {
+    max-width: 1024px;
+  }
+  @media (width >= 1280px) {
+    max-width: 1280px;
+  }
+  @media (width >= 1400px) {
+    max-width: 1400px;
+  }
+}
+
+@utility text-glow {
+  @apply relative;
+  text-shadow: 0 0 10px rgba(167, 139, 250, 0.5);
+}
+
+@utility card-hover {
+  @apply transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg;
+}
+
+@utility gradient-border {
+  @apply relative rounded-md;
+  background: linear-gradient(to right, hsl(var(--card)), hsl(var(--card)));
+  background-clip: padding-box;
+  border: 1px solid transparent;
+}
+
+@utility cosmic-button {
+  @apply px-6 py-2 rounded-full bg-primary text-primary-foreground font-medium 
+         transition-all duration-300 hover:shadow-[0_0_10px_rgba(139,92,246,0.5)]
+         hover:scale-105 active:scale-95;
+}
+
+@utility star {
+  @apply absolute rounded-full bg-white;
+  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.4);
+}
+
+@utility meteor {
+  @apply absolute bg-linear-to-r from-white via-white to-transparent rounded-full;
+  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
+}
+
+#root {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+.bold-underline span:first-child {
+  position: relative;
+}
+
+/* Float animation for profile image */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Slide in animation */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in {
+  animation: slideIn 0.6s ease-out forwards;
+  opacity: 0;
+}
+/* Fancy button layers */
+.fancy-btn {
+  isolation: isolate;
+  overflow: hidden;
+}
+.fancy-btn .fill-layer {
+  mix-blend-mode: normal;
+}
+.fancy-btn .gradient-ring {
+  background:
+    radial-gradient(circle at 15% 15%, var(--primary) 0%, transparent 60%),
+    radial-gradient(circle at 85% 80%, var(--primary) 0%, transparent 65%);
+  opacity: 0;
+  transition: opacity .4s ease;
+  filter: blur(18px);
+}
+.fancy-btn:hover .gradient-ring {
+  opacity: .55;
+}
+.fancy-btn .shine {
+  background: linear-gradient(115deg, transparent 0%, rgba(255,255,255,0.55) 45%, rgba(255,255,255,0.1) 60%, transparent 75%);
+}
+@keyframes shine {
+  0% { transform: translateX(-130%); }
+  60% { transform: translateX(10%); }
+  100% { transform: translateX(130%); }
+}
+@keyframes pulseGlow {
+  0%,100% { box-shadow: 0 0 0 0 rgba(var(--primary-rgb,0,0,0),0.0); }
+  50% { box-shadow: 0 0 18px -4px var(--primary); }
+}
+.fancy-btn:hover {
+  animation: pulseGlow 2.2s ease-in-out infinite;
+}
+
+/* Variant 2 (optional) */
+.glass-btn {
+  background: linear-gradient(to bottom right, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+  border: 1px solid rgba(var(--primary-rgb,255,255,255),0.25);
+  backdrop-filter: blur(8px);
+  transition: all .35s ease;
+  position: relative;
+  overflow: hidden;
+}
+.glass-btn::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  background: var(--primary);
+  transform: scaleX(0);
+  transform-origin:left;
+  transition: transform .5s ease;
+  z-index:0;
+}
+.glass-btn:hover::before {
+  transform: scaleX(1);
+}
+.glass-btn span {
+  position:relative;
+  z-index:1;
+  transition: color .35s ease;
+}
+.glass-btn:hover span {
+  color:#fff;
+}
+
+/* Variant 3 (optional) */
+.underline-btn {
+  position:relative;
+  overflow:hidden;
+}
+.underline-btn::after {
+  content:"";
+  position:absolute;
+  left:12%;
+  bottom:14px;
+  width:0;
+  height:3px;
+  background:linear-gradient(90deg,var(--primary),var(--primary) 60%,transparent);
+  transition:width .4s cubic-bezier(.4,.9,.3,1);
+  border-radius:2px;
+}
+.underline-btn:hover::after {
+  width:76%;
+}
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
