@@ -2,7 +2,7 @@ import { Search } from "lucide-react";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
 import { ProjectList } from "../components/ProjectList";
-import DotGrid from "../components/dotGrid";
+import DotGrid from "../components/DotGrid";
 import { useState, useEffect } from "react";
 
 export const Projects = () => {

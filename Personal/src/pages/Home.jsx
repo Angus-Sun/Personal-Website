@@ -3,7 +3,7 @@ import { ThemeToggle } from "../components/ThemeToggle";
 import { AboutSection } from "../components/AboutSection";
 import { ContactSection } from "../components/ContactSection";
 import { Footer } from "../components/Footer";
-import DotGrid from "../components/dotGrid";
+import DotGrid from "../components/DotGrid";
 import { useState, useEffect } from "react";
 export const Home = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
