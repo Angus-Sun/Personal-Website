@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import TextType from "./TextType";
-import { Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { Github, Linkedin, Mail} from "lucide-react";
 import { useNavigate } from "react-router-dom";
 export const AboutSection = () => {
   const [showSecondText, setShowSecondText] = useState(false);
