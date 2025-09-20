@@ -37,7 +37,7 @@ export const AboutSection = () => {
         alt="University of Waterloo"
         className="inline w-6 h-6 xl:w-8 xl:h-8 2xl:w-10 2xl:h-10 mx-2 rounded-sm"
       />{" "}
-      <BoldUnderline>University of Waterloo</BoldUnderline>
+      <BoldUnderline><a href="https://uwaterloo.ca/" target="_blank" rel="noopener noreferrer" className="font-medium">University of Waterloo</a></BoldUnderline>
     </>,
     <>
       Interested in <BoldUnderline>web development &amp; AI/ML</BoldUnderline> and building scalable, innovative applications
@@ -59,7 +59,7 @@ export const AboutSection = () => {
         src="/assets/images/squat.png" 
         alt="Squat Showdown"
         className="inline w-6 h-6 xl:w-8 xl:h-8 2xl:w-10 2xl:h-10 mx-2 rounded-sm"
-      />{" "} <BoldUnderline>Squat Showdown</BoldUnderline>, a web app which leverages AI to detect human poses
+      />{" "} <BoldUnderline><a href="https://squat-showdown.vercel.app" target="_blank" rel="noopener noreferrer" className="font-medium">Squat Showdown</a></BoldUnderline>, a web app which leverages AI to detect human poses
     </>,
     <>
       Interned{" "}
@@ -67,7 +67,7 @@ export const AboutSection = () => {
         src="/assets/images/falcon_technologies.jpeg" 
         alt="University of Waterloo"
         className="inline w-6 h-6 xl:w-8 xl:h-8 2xl:w-10 2xl:h-10 mx-2 rounded-sm"
-      />{" "} <BoldUnderline> Falcon Technologies</BoldUnderline>, developing secure APIs & scalable systems
+      />{" "} <BoldUnderline><a href="http://falcontechnologies.com" target="_blank" rel="noopener noreferrer" className="font-medium">Falcon Technologies</a></BoldUnderline>, developing secure APIs & scalable systems
     </>,
   ];
 
