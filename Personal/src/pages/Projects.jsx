@@ -43,6 +43,25 @@ export const Projects = () => {
 
   const projects = [
     {
+      title: "MatchA Dance",
+      href: "https://matchadance.vercel.app/",
+      description:
+        "AI-powered dance battle app that scores choreography accuracy using MediaPipe motion tracking. Winner of GoOnHacks 2025 (1st Place Overall 🏆) among 200 selected hackers out of 800 signups.",
+image: "/assets/projects/MatchADance.jpg",
+      image: "/assets/projects/MatchA Dance.jpg",
+      imageAlt: "MatchA Dance demo",
+      technologies: [
+        "React",
+        "Vite",
+        "Supabase",
+        "Express",
+        "MediaPipe",
+        "Google OAuth",
+        "Vercel",
+        "Render"
+      ],
+    },
+    {
       title: "Squat Showdown",
       href: "https://squat-showdown.vercel.app",
       description:
