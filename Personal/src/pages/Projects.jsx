@@ -60,6 +60,8 @@ image: "/assets/projects/MatchADance.jpg",
         "Vercel",
         "Render"
       ],
+      github: "https://github.com/Angus-Sun/MatchA-Dance",
+      demo: "https://matchadance.vercel.app/",
     },
     {
       title: "Squat Showdown",
