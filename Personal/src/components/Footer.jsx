@@ -20,6 +20,12 @@ const socialLinks = [
     colorClass: "hover:text-primary-foreground",
   },
   {
+    name: "Resume",
+    icon: Newspaper,
+    href: "/Angus_Sun_Resume.pdf",
+    colorClass: "hover:text-primary-foreground",
+  },
+  {
     name: "Twitter",
     icon: Twitter,
     href: "https://www.twitter.com/_angussun_",
