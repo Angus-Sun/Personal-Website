@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Newspaper, Twitter } from "lucide-react";
+import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 
 const socialLinks = [
   {
@@ -17,12 +17,6 @@ const socialLinks = [
     name: "Email",
     icon: Mail,
     href: "mailto:a86sun@uwaterloo.ca",
-    colorClass: "hover:text-primary-foreground",
-  },
-  {
-    name: "Resume",
-    icon: Newspaper,
-    href: "/Angus_Sun_Resume.pdf",
     colorClass: "hover:text-primary-foreground",
   },
   {

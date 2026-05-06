@@ -43,6 +43,28 @@ export const Projects = () => {
 
   const projects = [
     {
+      title: "Did I Cook?",
+      href: "https://did-i-cook-gold.vercel.app/",
+      description:
+        "Real-time AI-judged debate app where two players debate a topic on video and Gemini scores them with evidence-backed reasoning using a RAG pipeline (Pinecone + sentence embeddings).",
+      image: "/assets/projects/DidICook.jpg",
+      imageAlt: "Did I Cook? demo",
+      technologies: [
+        "Next.js",
+        "Spring Boot",
+        "FastAPI",
+        "Gemini",
+        "Pinecone",
+        "WebRTC",
+        "Tailwind CSS",
+        "Framer Motion",
+        "Vercel",
+        "Render"
+      ],
+      github: "https://github.com/Angus-Sun/Did-I-Cook",
+      demo: "https://did-i-cook-gold.vercel.app/",
+    },
+    {
       title: "MatchA Dance",
       href: "https://matchadance.vercel.app/",
       description:

@@ -1,18 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import TextType from "./TextType";
 import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 export const AboutSection = () => {
   const [showSecondText, setShowSecondText] = useState(false);
   const navigate = useNavigate();
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowSecondText(true);
-    }, 2900);
-
-    return () => clearTimeout(timer);
-  }, []);
 
   const BoldUnderline = ({ children }) => (
     <span className="font-bold relative bold-underline text-foreground group-hover:text-hover-accent transition-colors duration-300">
@@ -90,6 +82,7 @@ export const AboutSection = () => {
               initialDelay={1000}
               showCursor={!showSecondText}
               loop={false}
+              onComplete={() => setShowSecondText(true)}
               cursorClassName="text-foreground"
               className="inline text-foreground"
             />

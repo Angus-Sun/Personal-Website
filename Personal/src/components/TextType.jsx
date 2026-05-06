@@ -21,6 +21,7 @@ const TextType = ({
   textColors = [],
   variableSpeed,
   onSentenceComplete,
+  onComplete,
   startOnVisible = false,
   reverseMode = false,
   ...props
@@ -117,6 +118,8 @@ const TextType = ({
           timeout = setTimeout(() => {
             setIsDeleting(true);
           }, pauseDuration);
+        } else if (!loop && onComplete) {
+          onComplete();
         }
       }
     };
@@ -143,7 +146,8 @@ const TextType = ({
     isVisible,
     reverseMode,
     variableSpeed,
-    onSentenceComplete
+    onSentenceComplete,
+    onComplete
   ]);
 
   const shouldHideCursor =
